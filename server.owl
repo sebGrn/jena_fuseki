@@ -1,0 +1,362 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#"
+     xml:base="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#hasBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isBaseOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#hasIngredient">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isIngredienOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#hasTopping">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isToppingOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isBaseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isBaseOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isIngredienOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaBase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isIngredienOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isIngredienOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isToppingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isToppingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#isIngredienOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#AnchovyTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#AnchovyTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#CaperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#CaperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#VegatableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#CheeseTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#CheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#DeepPanBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#DeepPanBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaBase"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#ThinAndCrispyBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#GreenPepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#GreenPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#HamTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#HamTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#JalapenoPepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#JalapenoPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MeatTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MeatTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MozzarellaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MozzarellaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#CheeseTopping"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#ParmezanTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MushroomTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MushroomTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#VegatableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#OliveTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#OliveTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#VegatableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#OnionTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#OnionTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#VegatableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#ParmezanTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#ParmezanTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#CheeseTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#VegatableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PepperoniTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PepperoniTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#Pizza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaBase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaTopping"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PrawnTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PrawnTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#RedPepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#RedPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#SeafoodTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#SeafoodTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#SpicyBeefTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#SpicyBeefTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#ThinAndCrispyBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#ThinAndCrispyBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#TomatoTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#TomatoTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#VegatableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#TunaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#TunaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#VegatableTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#VegatableTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#AnchovyTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PrawnTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#TunaTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#CaperTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MushroomTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#OliveTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#OnionTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PepperTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#TomatoTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#CheeseTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#MeatTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#SeafoodTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#VegatableTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#GreenPepperTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#JalapenoPepperTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#RedPepperTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#HamTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PepperoniTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#SpicyBeefTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#Pizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaBase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gerin/ontologies/2019/2/untitled-ontology-24#PizzaTopping"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
