@@ -11,8 +11,7 @@
                   fuseki:name                   "ds" ;
                   fuseki:serviceQuery           "query" , "sparql" ;
                   fuseki:serviceReadGraphStore  "get" ;
-                  fuseki:serviceReadWriteGraphStore
-        "data" ;
+                  fuseki:serviceReadWriteGraphStore   "data" ;
                   fuseki:serviceUpdate          "update" ;
                   fuseki:serviceUpload          "upload" .
 
@@ -21,9 +20,7 @@
 
 <#modeInf> a ja:InfModel;
            ja:baseModel <#tdbGraph>;
-           ja:reasoner   [
-                             ja:reasonerClass    "openllet.jena.PelletReasonerFactory" ]
-.
+           ja:reasoner [ ja:reasonerURL <http://jena.hpl.hp.com/2003/GenericRuleReasoner> ] .
 
 <#tdbGraph> rdf:type tdb:GraphTDB ;
             tdb:dataset :tdb_dataset_readwrite  .

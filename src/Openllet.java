@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.IOException;
 import java.nio.file.Files;
 
-import openllet.jena.PelletReasonerFactory;
+//import openllet.jena.PelletReasonerFactory;
 import org.apache.jena.fuseki.main.FusekiServer;
 import org.apache.jena.query.Dataset;
 import org.apache.jena.rdf.model.InfModel;
@@ -13,6 +13,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.tdb.TDBFactory;
+import org.apache.jena.reasoner.ReasonerRegistry;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
@@ -38,13 +39,13 @@ public class Openllet {
         directory = "./tdb" ;
         config = "./config.ttl";
 
-        // check whether a location already has a TDB database
-        // or whether a call to TDBFactory will cause a new TDB database to be created
+        // check whether a location already has a TDB database or whether a call to TDBFactory will cause a new, fresh TDB database to be created
         if (!TDBFactory.inUseLocation(directory)){
             // create or connect to a TDB-backed dataset
             Dataset dataset = TDBFactory.createDataset(directory);
             // create a reasoner from openllet.jena.PelletReasonerFactory
-            final Reasoner reasoner = PelletReasonerFactory.theInstance().create();
+            //final Reasoner reasoner = PelletReasonerFactory.theInstance().create();
+            final Reasoner reasoner = ReasonerRegistry.getRDFSReasoner();
             // create a model (empty object)
             final Model emptyModel = ModelFactory.createDefaultModel();
             // create a inference model from the reasoner and empty model
@@ -56,7 +57,9 @@ public class Openllet {
             // create fuseki server from the dataset
             FusekiServer server = FusekiServer.create()
                     .add("/ds", dataset)
-                    .build() ;
+                    .build();
+
+
             // start and the server for testing
             server.start();
             server.stop();
